@@ -14,7 +14,7 @@ class Api::V1::AuthController < ApiController
 
   def login
     if params[:email] && params[:password]
-      user = User.find_by_email( params[:eamil] )
+      user = User.find_by_email( params[:email] )
     end
 
     if user && user.valid_password?( params[:password] )
